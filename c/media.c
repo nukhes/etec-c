@@ -27,5 +27,8 @@ int main() {
     } else {
         printf("REPROVADO");
     }
-    printf(", SUA MÉDIA É: %f", c);
+    printf(", SUA MEDIA E: %f\n\n", c);
+
+    system("pause");
+    return 0;
 }

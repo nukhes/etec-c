@@ -26,5 +26,8 @@ int main() {
         c = nums[2][1] - nums[1][1];
     }
     
-    printf("%f", c);
+    printf("%f\n\n", c);
+
+    system("pause");
+    return 0;
 }
