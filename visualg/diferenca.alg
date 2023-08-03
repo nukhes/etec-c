@@ -17,7 +17,7 @@ escreval(b-a)
 fimse
 
 se (a=b) entao
-escreval("são iguais")
+escreval("sÃ£o iguais")
 fimse
 
 fimalgoritmo
