@@ -27,7 +27,7 @@ int main() {
     } else {
         printf("REPROVADO");
     }
-    printf(", SUA MEDIA E: %f\n\n", c);
+    printf(", SUA MEDIA E: %.2f\n\n", c);
 
     system("pause");
     return 0;
