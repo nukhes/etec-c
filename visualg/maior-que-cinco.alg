@@ -1,8 +1,8 @@
-algoritmo "rafael"
-// Função :
+algoritmo "maiorquecinco"
+// FunÃ§Ã£o :
 // Autor :
 // Data : 27/07/2023
-// Seção de Declarações
+// SeÃ§Ã£o de DeclaraÃ§Ãµes
 var
 a:inteiro
 inicio
