@@ -3,13 +3,17 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/msys64/usr/lib/gcc/x86_64-pc-msys/11.3.0/include/c++/tr1",
+                "C:/msys64/usr/lib/gcc/x86_64-pc-msys/11.3.0/include/c++",
+                "C:/msys64/usr/lib/gcc/x86_64-pc-msys/11.3.0/include/c++/x86_64-pc-msys"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ]
+            ],
+            "compilerPath": "C:/msys64/usr/bin/gcc.exe"
         }
     ],
     "version": 4

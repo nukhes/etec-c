@@ -13,11 +13,24 @@ int main() {
     printf("escreva um numero: ");
     scanf("%i", &c);
     
-    //abc
-    if (a<b && b<c) {
-        printf("%i, %i, %i", a, b, c);
-    } else if (b<a && a<c) { //bac
-        
+    if (a < b && a < c) {
+        if (b < c) {
+            printf("%i, %i, %i", a,b,c);
+        } else {
+            printf("%i, %i, %i", a,c,b);
+        }
+    } else if (b < a && b < c) {
+        if (a < c) {
+            printf("%i, %i, %i", b,a,c);
+        } else {
+            printf("%i, %i, %i", b,c,a);
+        }
+    } else if (c < b && c < a) {
+        if (b < a) {
+            printf("%i, %i, %i", c,b,a);
+        } else {
+            printf("%i, %i, %i", c,a,b);
+        }
     }
     
     return 0;
