@@ -13,15 +13,15 @@ int main() {
 	scanf("%i", &d);
 
 	if ((a % 2) ==  0 && (a % 3) == 0) {
-		printf("%i e divisivel por 2 e 3.", a)
+		printf("%i e divisivel por 2 e 3.", a);
 	}
 	if ((b % 2) ==  0 && (a % 3) == 0) {
-		printf("%i e divisivel por 2 e 3.", b)
+		printf("%i e divisivel por 2 e 3.", b);
 	}
 	if ((c % 2) ==  0 && (a % 3) == 0) {
-		printf("%i e divisivel por 2 e 3.", c)
+		printf("%i e divisivel por 2 e 3.", c);
 	}
 	if ((d % 2) ==  0 && (a % 3) == 0) {
-		printf("%i e divisivel por 2 e 3.", d)
+		printf("%i e divisivel por 2 e 3.", d);
 	}
 }
