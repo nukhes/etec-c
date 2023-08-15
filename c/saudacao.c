@@ -8,7 +8,7 @@ int main() {
   printf("digite de acordo com seu sexo\n\nMASCULINO: M\nFEMININO: F\n: ");
   scanf("%s", &sexo);
 
-  if (strcmp(sexo, "M")) {
+  if (strncmp(sexo, "M", 1) == 0) {
     printf("llmo Sr. %s", nome);
   } else {
     printf("llma Sra. %s", nome);
