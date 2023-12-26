@@ -49,7 +49,7 @@ void verifyGame() {
 		}
 		
 	}
-	
+
 	// vertical
 	for (int i = 0; i <= 2; i++) {
 		
