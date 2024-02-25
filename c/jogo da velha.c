@@ -2,6 +2,8 @@
 
 /*
 
+TODO: refatorar codigo
+
 INDICE
 0 - neutro
 1 - jogador01
@@ -12,6 +14,7 @@ STATE
 1 - parar jogo
 
 */
+
 int game[9];
 int state = 0;
 
@@ -51,9 +54,9 @@ void verifyGame() {
 	}
 
 	// vertical
-	for (int i = 0; i <= 2; i++) {
+	for (int j = 0; j <= 2; j++) {
 		
-		if (game[i] == game[i+3] && game[i] == game[i+6] && game[i] != 0) {
+		if (game[j] == game[j+3] && game[j] == game[j+6] && game[j] != 0) {
 			state = 1;
 		}
 		
