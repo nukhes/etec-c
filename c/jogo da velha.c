@@ -1,11 +1,10 @@
 #include<stdio.h>
+#include <stdbool.h>
 
 /*
 
-TODO: refatorar codigo
-
 INDICE
-0 - neutro
+0 - vazio
 1 - jogador01
 2 - jogador02
 
@@ -16,7 +15,7 @@ STATE
 */
 
 int game[9];
-int state = 0;
+bool state = true;
 
 void start() {
 	for (int i = 0; i <= 8; i++) {
@@ -42,41 +41,45 @@ void insertGame(player) {
 	
 	game[pos] = player;
 }
-void verifyGame() {
-	
-	// horinzontal
+
+void horinzontal(void) {
 	for (int i = 0; i <= 6; i+=3) {
-		
 		if (game[i] == game[i+1] && game[i] == game[i+2] && game[i] != 0) {
-			state = 1;
+			state = false;
 		}
-		
+	}
+}
+void vertical(void) {
+	for (int j = 0; j <= 2; j++) {
+		if (game[j] == game[j+3] && game[j] == game[j+6] && game[j] != 0) {
+			state = false;
+		}
+	}
+}
+void diagonal(void) {
+	if (game[0] == game[4] && game[0] == game[8] && game[0] != 0) {
+		state = false;
 	}
 
-	// vertical
-	for (int j = 0; j <= 2; j++) {
-		
-		if (game[j] == game[j+3] && game[j] == game[j+6] && game[j] != 0) {
-			state = 1;
-		}
-		
-	}
-	
-	// diagonal
-	if (game[0] == game[4] && game[0] == game[8] && game[0] != 0) {
-		state = 1;
-	}
-	
 	if (game[2] == game[4] && game[2] == game[6] && game[2] != 0) {
-		state = 1;
+		state = false;
 	}
-	
-	int c = 0;
-	
-	// velha
-	if (game[0] != 0 && game[1] != 0 && game[2] != 0 && game[3] != 0 && game[4] != 0 && game[5] != 0 && game[6] != 0 && game[7] != 0 && game[8] != 0) {
-		state = 1;
+}	
+void noMoreSpace(void) {
+	for (int i = 0; i <= 8; i++) {
+		if (game[i] == 0) {break;}
+		if (i == 8) {state = false;}
 	}
+}
+
+bool verifyGame() {
+
+	horinzontal();
+	vertical();
+	diagonal();
+	noMoreSpace();
+
+	return state;
 }
 
 int main() {
@@ -84,23 +87,19 @@ int main() {
 	start();
 	printGame();
 	
-	while (state == 0) {
-		printf("\n\nJOGADOR 01\n\n");
-		insertGame(1);
-		printGame();
-		verifyGame();
-		
-		if (state == 0) {
-			printf("\n\nJOGADOR 02\n\n");
-			insertGame(2);
+	while (verifyGame()) {
+
+		for (int i = 1; i <= 2; i++) {
+			printf("\n\nJOGADOR 0%i\n\n", i);
+			insertGame(i);
 			printGame();
-			verifyGame();
+
+			if (!verifyGame()) {break;}
 		}
+
 	}
 	
 	printf("\n\n====== FIM DE JOGO ======");
-	
-	sleep(30);
 	
 	return 0;
 }
