@@ -1,2 +1,2 @@
 # etec-c
-códigos que eu fiz durante as aulas do primeiro ano na ETEC
+Códigos em C e em Portugol do primeiro ano de Desenvolvimento de Sistemas na ETEC
